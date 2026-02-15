@@ -1,0 +1,116 @@
+body {
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+  background-color: #008080;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.legacy-panel {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  padding: 4px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.title-bar {
+  background: navy;
+  background: linear-gradient(90deg, navy, #1084d0);
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+fieldset {
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 0.8em;
+  margin-left: 10px;
+  padding: 0 5px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.col {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px inset #fff;
+  background: white;
+  padding: 3px;
+  font-size: 13px;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: -2px;
+  padding-left: 5px;
+}
+.tab {
+  padding: 4px 10px;
+  background: #c0c0c0;
+  border: 1px solid white;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  font-size: 12px;
+}
+.tab.active {
+  font-weight: bold;
+  position: relative;
+  top: 2px;
+  height: 16px;
+  z-index: 1;
+}
+
+.actions {
+  margin-top: 10px;
+  text-align: right;
+}
+button {
+  background: #c0c0c0;
+  border: 2px outset white;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:active {
+  border-style: inset;
+}
+
+.status-log {
+  margin-top: 15px;
+  border: 2px inset white;
+  height: 80px;
+  background: black;
+  color: #0f0;
+  font-family: "Consolas", monospace;
+  font-size: 11px;
+  padding: 5px;
+  overflow-y: auto;
+}

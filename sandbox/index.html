@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Expense Manager 2000</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="legacy-panel">
+      <div class="title-bar">
+        <span>📂 ENTERPRISE_EXPENSE_MGR_V2.EXE</span>
+        <span style="float: right">[X]</span>
+      </div>
+
+      <div class="tabs">
+        <span class="tab active">General Entry</span>
+        <span class="tab">Cost Allocation</span>
+        <span class="tab">Tax & Compliance</span>
+      </div>
+
+      <form id="chaosForm">
+        <fieldset>
+          <legend>Basic Transaction Data</legend>
+
+          <div class="row">
+            <div class="col">
+              <label>GL_ALLOCATION_CODE (*)</label>
+              <select id="glCode">
+                <option value="">-- SELECT GL --</option>
+                <option value="TRV-01">TRV-01 (Ground Transport)</option>
+                <option value="TRV-02">TRV-02 (Air Travel)</option>
+                <option value="ACC-50">ACC-50 (Lodging/Hotel)</option>
+                <option value="FOD-99">FOD-99 (Meals & Ent.)</option>
+                <option value="EQP-X5">EQP-X5 (IT Hardware)</option>
+                <option value="MSC-00">MSC-00 (Misc/Other)</option>
+              </select>
+            </div>
+            <div class="col">
+              <label>TRANS_DATE (YYYY-MM-DD)</label>
+              <input type="date" id="expenseDate" />
+            </div>
+          </div>
+
+          <label>COST_CENTER_REF</label>
+          <select id="costCenter">
+            <option value="CC-GEN-000">CC-GEN-000 (General Overhead)</option>
+            <option value="CC-MK-2026">CC-MK-2026 (Marketing Dept)</option>
+            <option value="CC-DEV-001">CC-DEV-001 (R&D Engineering)</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Variable Details (Context Dependent)</legend>
+
+          <div class="row">
+            <div class="col">
+              <label>NET_AMOUNT_CENTS</label>
+              <input
+                type="number"
+                id="amount"
+                placeholder="0000"
+                style="background: #ffffe0"
+              />
+            </div>
+            <div class="col">
+              <label>TAX_JURISDICTION_ID</label>
+              <input type="text" id="taxId" placeholder="AUTO-CALC" readonly />
+            </div>
+          </div>
+
+          <label>ROUTE_INFO (Origin -> Dest) [Req for TRV]</label>
+          <input type="text" id="routeInfo" placeholder="N/A" />
+
+          <div class="row">
+            <div class="col">
+              <label>PAX_COUNT [Req for FOD]</label>
+              <input type="number" id="paxCount" placeholder="1" />
+            </div>
+            <div class="col">
+              <label>PROJECT_WBS_CODE</label>
+              <input type="text" id="projectCode" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Audit Trail</legend>
+          <label>SYSTEM_AUDIT_STRING (Do not edit)</label>
+          <input
+            type="text"
+            id="notes"
+            style="font-family: monospace; font-size: 10px; color: gray"
+            readonly
+          />
+        </fieldset>
+
+        <div class="actions">
+          <button type="button">💾 SAVE RECORD</button>
+          <button type="button">🖨️ PRINT FORM</button>
+          <button type="reset">❌ CLEAR</button>
+        </div>
+      </form>
+
+      <div class="status-log" id="consoleLog">
+        > SYSTEM BOOT SEQUENCE INITIATED...<br />
+        > WAITING FOR INPUT...<br />
+      </div>
+    </div>
+
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
