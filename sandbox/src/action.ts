@@ -1,7 +1,7 @@
 import { logger } from "./logger";
 
 export const executeAction = async (params: any) => {
-  logger(`🤖 Analizando interacción: ${JSON.stringify(params)}`);
+  logger(`Analizando interacción: ${JSON.stringify(params)}`);
 
   const fill = (id: string, val: any) => {
     const el = document.getElementById(id) as

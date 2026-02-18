@@ -14,6 +14,10 @@ const toolDefinition = {
 };
 
 setTimeout(async () => {
+  if (!navigator.modelContext) {
+    installPolyfill();
+  }
+
   if (navigator.modelContext) {
     try {
       await navigator.modelContext.registerTool(toolDefinition);

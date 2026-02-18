@@ -1,7 +1,7 @@
 export const installPolyfill = () => {
   if (!navigator.modelContext) {
     console.log(
-      "⚠️ WebMCP compatible no compatible con el navegador actual. Activando Polyfill local para desarrollo.",
+      "⚠️ WebMCP no compatible con el navegador actual. Activando Polyfill local para desarrollo.",
     );
 
     const toolRegistry = new Map();

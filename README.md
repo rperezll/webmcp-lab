@@ -12,6 +12,10 @@ Para testear el alcance de esta tecnología se plantea una aplicación _legacy_ 
   <img src="/assets/webmcp-test.png" alt="Detección y prompt para ejecutar la acción de cargar un nuevo gasto" width="600">
 </p>
 
+<p align="center">
+  <img src="/assets/webmcp-test.png" alt="Uso de la tool por parte de un LLM para tabular el formulario" width="600">
+</p>
+
 ## Ejecutar el entorno
 
 > Construido sobre **Node 22**.
