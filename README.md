@@ -13,7 +13,7 @@ Para testear el alcance de esta tecnología se plantea una aplicación _legacy_ 
 </p>
 
 <p align="center">
-  <img src="/assets/webmcp-test.png" alt="Uso de la tool por parte de un LLM para tabular el formulario" width="600">
+  <img src="/assets/webmcp-test2.png" alt="Uso de la tool por parte de un LLM para tabular el formulario" width="600">
 </p>
 
 ## Ejecutar el entorno
